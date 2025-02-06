@@ -1,12 +1,11 @@
-package com.eventapp.event_api.controllers;
+package com.eventapp.event_api.controllers.auth;
 
 import com.eventapp.event_api.domain.user.User;
-import com.eventapp.event_api.dto.LoginRequestDTO;
-import com.eventapp.event_api.dto.RegisterRequestDTO;
-import com.eventapp.event_api.dto.LoginResponseDTO;
+import com.eventapp.event_api.dto.auth.login.LoginRequestDTO;
+import com.eventapp.event_api.dto.auth.register.RegisterRequestDTO;
+import com.eventapp.event_api.dto.auth.login.LoginResponseDTO;
 import com.eventapp.event_api.infra.security.TokenService;
 import com.eventapp.event_api.repositories.UserRepository;
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;

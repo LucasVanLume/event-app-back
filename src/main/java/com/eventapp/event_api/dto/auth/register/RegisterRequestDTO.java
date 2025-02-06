@@ -1,4 +1,4 @@
-package com.eventapp.event_api.dto;
+package com.eventapp.event_api.dto.auth.register;
 
 public record RegisterRequestDTO (String name, String email, String password) {
     /*private String name;

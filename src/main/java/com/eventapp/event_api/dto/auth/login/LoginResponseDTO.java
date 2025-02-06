@@ -1,4 +1,4 @@
-package com.eventapp.event_api.dto;
+package com.eventapp.event_api.dto.auth.login;
 
 public record LoginResponseDTO (String name, String token) {
 }
