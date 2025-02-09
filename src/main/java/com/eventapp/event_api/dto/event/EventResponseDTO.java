@@ -1,6 +1,8 @@
 package com.eventapp.event_api.dto.event;
 
 import com.eventapp.event_api.domain.event.Event;
+
+import java.time.LocalDate;
 import java.util.UUID;
 
 public record EventResponseDTO(
@@ -11,7 +13,8 @@ public record EventResponseDTO(
         String eventUrl,
         String startTime,
         String endTime,
-        String date,
+        LocalDate startDate,
+        LocalDate endDate,
         String theme,
         String email,
         String phone,
@@ -27,7 +30,8 @@ public record EventResponseDTO(
                 event.getEventUrl(),
                 event.getStartTime(),
                 event.getEndTime(),
-                event.getDate(),
+                event.getStartDate(),
+                event.getEndDate(),
                 event.getTheme(),
                 event.getEmail(),
                 event.getPhone(),

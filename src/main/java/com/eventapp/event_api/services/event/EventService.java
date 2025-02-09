@@ -1,6 +1,7 @@
 package com.eventapp.event_api.services.event;
 
 import com.eventapp.event_api.domain.event.Event;
+import com.eventapp.event_api.domain.event.EventDateConverter;
 import com.eventapp.event_api.domain.user.User;
 import com.eventapp.event_api.dto.event.EventRequestDTO;
 import com.eventapp.event_api.infra.security.UserDetailsService;
@@ -31,7 +32,10 @@ public class EventService {
         newEvent.setEventUrl(data.eventUrl());
         newEvent.setStartTime(data.startTime());
         newEvent.setEndTime(data.endTime());
-        newEvent.setDate(data.date());
+/*        newEvent.setStartDate(data.startDate());
+        newEvent.setEndDate(data.endDate());*/
+        newEvent.setStartDate(EventDateConverter.convertStringToLocalDate(data.startDate()));
+        newEvent.setEndDate(EventDateConverter.convertStringToLocalDate(data.endDate()));
         newEvent.setRemote(data.remote());
         newEvent.setTheme(data.theme());
         newEvent.setEmail(data.email());
