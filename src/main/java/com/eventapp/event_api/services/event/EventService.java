@@ -24,6 +24,8 @@ public class EventService {
     @Autowired
     private EventRepository eventRepository;
     @Autowired
+    private AddressService addressService;
+    @Autowired
     private UserRepository userRepository;
     @Autowired
     private UserDetailsService userDetailsService;
@@ -48,6 +50,11 @@ public class EventService {
         newEvent.setUser(user);
 
         eventRepository.save(newEvent);
+
+        if (data.address() != null) {
+            addressService.createAddress(data, newEvent);
+        }
+
         return newEvent;
     }
 

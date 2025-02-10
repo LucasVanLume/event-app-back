@@ -12,4 +12,5 @@ public record EventRequestDTO(
         String theme,
         String email,
         String phone,
-        Boolean remote) { }
+        Boolean remote,
+        AddressRequestDTO address) { }
