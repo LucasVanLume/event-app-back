@@ -7,8 +7,10 @@ public record EventRequestDTO(
         String eventUrl,
         String startTime,
         String endTime,
-        String date,
+        String startDate,
+        String endDate,
         String theme,
         String email,
         String phone,
-        Boolean remote) { }
+        Boolean remote,
+        AddressRequestDTO address) { }

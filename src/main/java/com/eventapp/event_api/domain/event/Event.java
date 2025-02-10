@@ -6,6 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 @Table(name = "event")
@@ -24,7 +25,8 @@ public class Event {
     private String eventUrl;
     private String startTime;
     private String endTime;
-    private String date;
+    private LocalDate startDate;
+    private LocalDate endDate;
     private String theme;
     private String email;
     private String phone;
@@ -90,12 +92,20 @@ public class Event {
         this.endTime = endTime;
     }
 
-    public String getDate() {
-        return date;
+    public LocalDate getStartDate() {
+        return startDate;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartDate(LocalDate startDate) {
+        this.startDate = startDate;
+    }
+
+    public LocalDate getEndDate() {
+        return endDate;
+    }
+
+    public void setEndDate(LocalDate endDate) {
+        this.endDate = endDate;
     }
 
     public String getTheme() {
